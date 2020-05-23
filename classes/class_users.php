@@ -20,7 +20,7 @@ class nb_users
 		$query = dbs::$conns->query("SELECT id, password, status FROM nb_users WHERE email = '".$this->email."'");
 		$user = mysqli_fetch_assoc($query);
 
-		if (strtolower($this->password) === strtolower($user['password']))
+		if (isset($user['password']) AND strtolower($this->password) === strtolower($user['password']))
 		{
 			if ($user['status'] == 1)
 			{
@@ -52,7 +52,7 @@ class nb_users
 			//check if email already existing
 			$query = dbs::$conns->query("SELECT email FROM nb_users WHERE email = '".$this->email."'");
 			$row = mysqli_fetch_assoc($query);
-			if ($row['email'] == $this->email)
+			if (isset($row['email']) AND $row['email'] == $this->email)
 			{
 				return 'exist';
 			}
