@@ -1,18 +1,22 @@
 <?php
 include_once('db_connection.php');
-session_start();
+include_once('constants.php');
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+}
 
 if (isset($_SESSION['user_id']))
 {
 	$id = $_SESSION['user_id'];
 
-	$query = dbs::$conns->query("SELECT db_name, db_username, db_password FROM nb_users WHERE id = '".$id."'");
+	$query = dbs::$conns->query("SELECT * FROM nb_users WHERE id = '".$id."'");
 	$user = mysqli_fetch_assoc($query);
 
-	$servername = 'localhost';
-	$username = $user['db_username'];
-	$password = $user['db_password'];
-	$database = $user['db_name'];
+	$servername = $sys_server;
+	$username = $sys_dbuser;
+	$password = $sys_dbpass;
+	$database = $sys_dbname;
+
 
 	// Public class
 	class db {
@@ -21,7 +25,6 @@ if (isset($_SESSION['user_id']))
 	db::$conn  = new mysqli($servername, $username, $password, $database);
 	mysqli_set_charset(db::$conn,"utf8");
 }
-
 
 
 ?>

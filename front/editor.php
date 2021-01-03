@@ -32,7 +32,7 @@ include_once('../classes/class_editor.php');
 		<div class="row p-3 bg-dark">
 			<div class="col-9 col-xl-10">
 				<div class="col-6 p-0 pl-1">
-					<h3 class="text-white">ZEMFIRA CSS</h3>
+					<h3 class="text-white">CSS VISUAL COLORS EDITOR</h3>
 				</div>
 			</div>
 			<div class="col-3 col-xl-2 d-flex">

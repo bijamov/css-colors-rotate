@@ -1,22 +1,29 @@
 <?php
 include_once('clients_connection.php');
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+}
 class nb_import_colors
 {
 	public $nb_colors_original = 'nb_colors_original';
 	public $nb_colors_position = 'nb_colors_position';
 	public $nb_colors_work_tbl = 'nb_colors_work_tbl';
 	public $nb_selected_colors = 'nb_selected_colors';
-
-	public $path = '../../uploads/adminlte.css';
-	public $filename = 'adminlte.css';
-	public $username = 'LedScorp';
+	public $path;
 
 //INITIALIZE
-	public function initialize($path, $filename, $username)
+	function __construct()
 	{
-
+		if (isset($_SESSION['file_path']) AND $_SESSION['file_path'] != '')
+		{
+			$this->path = $_SESSION['file_path'];
+		}
+	}
+	public function initialize()
+	{	
+		
 		$this->clear_tables();
-		$file = $this->read_file($this->path);
+		$file = $this->read_file();
 		$this->import_hex_to_database($file,$this->path);
 		$this->import_all_colors_model();
 		$this->copy_table();
@@ -27,14 +34,7 @@ class nb_import_colors
 	public function read_file() //return array[['string'],['position'],['model']]
 	{
 
-		$path = $this->path;
-		//$file = fopen($path, 'r') or die("Unable to open file!");
-		//$file = fread($file,filesize($path));
-		//fclose($file);
-
-		$file = file_get_contents($path);
-
-
+		$file = file_get_contents($this->path);
 		$export_array = [];
 		$entry = [];
 
@@ -129,13 +129,13 @@ class nb_import_colors
 
 	public function write_file()
 	{
-		$path = $this->path;
-		$new_file = file_get_contents($path);
+		
+		$new_file = file_get_contents($this->path);
 
-		$query = db::$conn->query("SELECT string, position, model, hex, alpha FROM ".$nb_colors_position." ORDER BY position DESC");
+		$query = db::$conn->query("SELECT string, position, model, hex, alpha FROM ".$this->nb_colors_position." WHERE user = '".$_SESSION['user_id']."' ORDER BY position DESC");
 		while ($clr = mysqli_fetch_assoc($query))
 		{
-			$query2 = db::$conn->query("SELECT new_hex FROM ".$nb_colors_work_tbl." WHERE hex = '".$clr['hex']."'");
+			$query2 = db::$conn->query("SELECT new_hex FROM ".$this->nb_colors_work_tbl." WHERE user = '".$_SESSION['user_id']."' AND hex = '".$clr['hex']."'");
 			$new_hex = mysqli_fetch_assoc($query2);
 
 
@@ -169,7 +169,7 @@ class nb_import_colors
 					break;
 			}
 		}
-		$filename = 'zemfira-css-'.date('m-d').'.css';
+		$filename = 'cssvce-css-'.date('d-m-y').'.css';
 		$myfile = fopen('../../downloads/'.$filename, "w") or die("Unable to open file!");
 		fwrite($myfile, $new_file);
 		fclose($myfile);
@@ -558,8 +558,7 @@ class nb_import_colors
 //DATABASE
 	public function import_hex_to_database($data) //import from data array into nb_colors_position, nb_colors_original
 	{
-		$filename = $this->path;
-
+		
 		foreach ($data as $entry)
 		{
 			$alpha = 'NULL';
@@ -589,19 +588,19 @@ class nb_import_colors
 					break;
 			}
 
-			$query = db::$conn->query("INSERT INTO ".$nb_colors_position."(string, file, position, model, hex, alpha)
-				VALUES('".$entry['string']."', '".$filename."', '".$entry['position']."', '".$model."', '".$hex."', ".$alpha.")");
+			$query = db::$conn->query("INSERT INTO ".$this->nb_colors_position."(user, string, file, position, model, hex, alpha)
+				VALUES('".$_SESSION['user_id']."', '".$entry['string']."', '".$this->path."', '".$entry['position']."', '".$model."', '".$hex."', ".$alpha.")");
 
 		}
 
-		$query = db::$conn->query("INSERT INTO `".$nb_colors_original."` (repetition, hex)
-		SELECT COUNT(id), hex FROM `".$nb_colors_position."` GROUP BY hex");
+		$query = db::$conn->query("INSERT INTO `".$this->nb_colors_original."` (user, repetition, hex)
+		SELECT user, COUNT(id), hex FROM `".$this->nb_colors_position."` WHERE user = '".$_SESSION['user_id']."' GROUP BY hex");
 	}
 
 	public function import_all_colors_model() //Convert all colors from hex to models rgb and hsl into nb_colors_original
 	{
 
-		$query = db::$conn->query("SELECT hex FROM ".$nb_colors_original);
+		$query = db::$conn->query("SELECT hex FROM ".$this->nb_colors_original." WHERE user = '".$_SESSION['user_id']."'");
 		while ($clr = mysqli_fetch_assoc($query))
 		{
 			$hex = $clr['hex'];
@@ -663,33 +662,38 @@ class nb_import_colors
 			$hsl_s = round($hsl_s*100);
 			$hsl_l = round($hsl_l*100);
 
-			db::$conn->query("UPDATE ".$nb_colors_original." SET
+			db::$conn->query("UPDATE ".$this->nb_colors_original." SET
 				rgb_r = '".$rgb_r."',
 				rgb_g = '".$rgb_g."',
 				rgb_b = '".$rgb_b."',
 				hsl_h = '".$hsl_h."',
 				hsl_s = '".$hsl_s."',
 				hsl_l = '".$hsl_l."'
-				WHERE hex = '".$hex."'");
+				WHERE user = '".$_SESSION['user_id']."' AND hex = '".$hex."'");
 		}
 	}
 
 	public function copy_table() //copy nb_colors_original to nb_colors_work_tbl
 	{
-		$from = $nb_colors_original;
-		$to = $nb_colors_work_tbl;
+		$from = $this->nb_colors_original;
+		$to = $this->nb_colors_work_tbl;
 
-		db::$conn->query("INSERT INTO ".$to." SELECT * FROM ".$from);
-		db::$conn->query("INSERT INTO ".$to." SELECT * FROM ".$from);
-		db::$conn->query("UPDATE ".$nb_colors_work_tbl." SET new_hex = hex");
+		db::$conn->query("INSERT INTO ".$to." SELECT * FROM ".$from." WHERE user = '".$_SESSION['user_id']."'");
+		// db::$conn->query("INSERT INTO ".$to." SELECT * FROM ".$from);
+		db::$conn->query("UPDATE ".$this->nb_colors_work_tbl." SET new_hex = hex WHERE user = '".$_SESSION['user_id']."'");
 	}
 
 	public function clear_tables()
 	{
-		$query = db::$conn->query("DELETE FROM ".$nb_colors_original);
-		$query = db::$conn->query("DELETE FROM ".$nb_colors_position);
-		$query = db::$conn->query("DELETE FROM ".$nb_colors_work_tbl);
-		$query = db::$conn->query("DELETE FROM ".$nb_selected_colors);
+		// $query = db::$conn->query("DELETE FROM ".$this->nb_colors_original);
+		// $query = db::$conn->query("DELETE FROM ".$this->nb_colors_position);
+		// $query = db::$conn->query("DELETE FROM ".$this->nb_colors_work_tbl);
+		// $query = db::$conn->query("DELETE FROM ".$this->nb_selected_colors);
+
+		$query = dbs::$conns->query("DELETE FROM nb_colors_original WHERE user = ".$_SESSION['user_id']);
+		$query = dbs::$conns->query("DELETE FROM nb_colors_position WHERE user = ".$_SESSION['user_id']);
+		$query = dbs::$conns->query("DELETE FROM nb_colors_work_tbl WHERE user = ".$_SESSION['user_id']);
+		$query = dbs::$conns->query("DELETE FROM nb_selected_colors WHERE user = ".$_SESSION['user_id']);
 	}
 
 }

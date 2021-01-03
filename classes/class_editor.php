@@ -8,33 +8,57 @@ public function all_colors_tab($hex='')
 {
 
 	$html = '';
-	$query = db::$conn->query("SELECT id, new_hex FROM nb_colors_work_tbl WHERE new_hex LIKE '%".$hex."%' ORDER BY hsl_h , hsl_l, hsl_s");
+	$query = db::$conn->query("SELECT * FROM nb_colors_work_tbl WHERE new_hex LIKE '%".$hex."%' AND user = '".$_SESSION['user_id']."' ORDER BY hsl_h , hsl_l, hsl_s");
 	while ($clr = mysqli_fetch_assoc($query))
 	{
 
-		$html .= '	<div data-hex="'.$clr['new_hex'].'" class="row nb_all_colors_row">
-						<div class="col-12 d-flex">
-							<div class="col-3 d-flex">
-								<span data-id="'.$clr['id'].'" class="px-2 add_to_selected">
-								<i class="fas fa-plus nb_pointer"></i>
-								</span>
-								<span class="px-2"><i id="rep_'.$clr['new_hex'].'" class="fas fa-cog text-center nb_pointer nb-replace_color"></i></span>
-							</div>
 
-							<div class="col-9 mb-2 text-white" style="background-color: #'.$clr['new_hex'].'">
-								<span>#'.$clr['new_hex'].'</span>
-							</div>
-						</div>
-					</div>';
+		$html .= '<div id="color_id-'.$clr['id'].'" data-r="'.$clr['rgb_r'].'" data-g="'.$clr['rgb_g'].'" data-b="'.$clr['rgb_b'].'" data-hex="'.$clr['new_hex'].'" data-id="'.$clr['id'].'" id="rep_'.$clr['new_hex'].'" class="nbed_all_colors_single_div drag_me ">
+					<div class="nbed_all_colors_single_cont">
+						<div class="nbed_all_colors_single_color" style="background-color: #'.$clr['new_hex'].'"></div>
+					</div>
+					
+					<span># '.strtoupper($clr['new_hex']).'</span>
+					<div class="nbed_all_colors_icons">
+						<span><img src="img/drag.svg"></span>
+						<span class="schb_edit drag_me_notme" data-id="'.$clr['id'].'" style="cursor: pointer;"><img src="img/pen.svg"></span>
+					</div>
+				</div>';
+
+
+
+
+
+
 	}
 	return $html;
+}
+
+public function all_colors_sum()
+{
+
+
+	$query = db::$conn->query("SELECT count(id) as id FROM nb_colors_work_tbl WHERE user = '".$_SESSION['user_id']."'");
+	while ($clr = mysqli_fetch_assoc($query))
+	{
+		$count = $clr['id'];
+	}
+	if (isset($count) AND $count != '')
+	{
+		return $count;
+	}
+	else
+	{
+		return '0';
+	}
+	
 }
 
 public function selected_colors_tab($many='0')
 {
 	$html = '';
 
-	$query = db::$conn->query("SELECT id_work_color FROM nb_selected_colors");
+	$query = db::$conn->query("SELECT id_work_color FROM nb_selected_colors WHERE user = '".$_SESSION['user_id']."'");
 	if ($query)
 	{
 		$selected = [];
@@ -51,7 +75,7 @@ public function selected_colors_tab($many='0')
 	if ($selected != [] AND $many == '0')
 	{
 		foreach ($selected as $id) {
-			$query = db::$conn->query("SELECT * FROM nb_colors_work_tbl WHERE id = '".$id."'");
+			$query = db::$conn->query("SELECT * FROM nb_colors_work_tbl WHERE id = '".$id."' AND user = '".$_SESSION['user_id']."'");
 			while ($clr = mysqli_fetch_assoc($query))
 			{
 
@@ -70,8 +94,8 @@ public function selected_colors_tab($many='0')
 	}
 	else
 	{
-		$query = db::$conn->query("DELETE FROM nb_selected_colors");
-		$query = db::$conn->query("SELECT * FROM nb_colors_work_tbl ORDER BY repetition  DESC LIMIT ".$many);
+		$query = db::$conn->query("DELETE FROM nb_selected_colors WHERE user = '".$_SESSION['user_id']."'");
+		$query = db::$conn->query("SELECT * FROM nb_colors_work_tbl WHERE user = '".$_SESSION['user_id']."' ORDER BY repetition  DESC LIMIT ".$many);
 		while ($clr = mysqli_fetch_assoc($query))
 		{
 
@@ -85,7 +109,7 @@ public function selected_colors_tab($many='0')
 
 			$html .= $this->create_selected_color_html($clr['id']);
 
-			$query1 = db::$conn->query("INSERT INTO nb_selected_colors (id_work_color) VALUES('".$clr['id']."')");
+			$query1 = db::$conn->query("INSERT INTO nb_selected_colors (user, id_work_color) VALUES('".$_SESSION['user_id']."', '".$clr['id']."')");
 		}
 
 
@@ -96,12 +120,30 @@ public function selected_colors_tab($many='0')
 
 public function add_to_selected($id)
 {
-	$query = db::$conn->query("INSERT INTO nb_selected_colors (id_work_color) VALUES('".$id."')");
+	$query = db::$conn->query("SELECT id_work_color FROM nb_selected_colors WHERE user = '".$_SESSION['user_id']."' AND id_work_color = ".$id);
+	$color = mysqli_fetch_assoc($query);
+	if($color != '')
+	{
+		return;
+	}
+	else
+	{
+		$query = db::$conn->query("INSERT INTO nb_selected_colors (user, id_work_color) VALUES('".$_SESSION['user_id']."', '".$id."')");
+	}
+
+	
+}
+
+
+public function remove_all_selected()
+{
+	$query = db::$conn->query("DELETE FROM nb_selected_colors WHERE user = '".$_SESSION['user_id']."'");
 }
 
 public function remove_color_from_selected($id)
 {
-	$query = db::$conn->query("DELETE FROM nb_selected_colors WHERE id_work_color = '".$id."'");
+	$query = db::$conn->query("DELETE FROM nb_selected_colors WHERE id_work_color = '".$id."' AND user = '".$_SESSION['user_id']."'");
+
 }
 
 
@@ -111,7 +153,7 @@ public function transformation_hue($hue_trf, $hsl)
 	$s = $hue_trf['s'];
 	$l = $hue_trf['l'];
 
-	if (($h == 0 OR $h == 180 OR $h == -180) AND $s == 0 AND $l == 0)
+	if ($h == 0 AND $s == 0 AND $l == 0)
 		{
 			return $arrayName = array('h' => $hsl['h'], 's' => $hsl['s'], 'l' => $hsl['l']);
 		}
@@ -153,25 +195,59 @@ public function transformation_hue($hue_trf, $hsl)
 	return $arrayName = array('h' => $new_h, 's' => $new_s, 'l' => $new_l);
 }
 
+public function transformation_channel_mixer($rgb_trf, $rgb)
+{
+
+	$old_r = $rgb['r'];
+	$old_g = $rgb['g'];
+	$old_b = $rgb['b'];
+
+	$new_r = $old_r + $rgb_trf['r'];
+	if ($new_r > 255)
+	{
+		$new_r = 255;
+	}elseif ($new_r < 0)
+	{
+		$new_r = 0;
+	}
+
+	$new_g = $old_g + $rgb_trf['g'];
+	if ($new_g > 255)
+	{
+		$new_g = 255;
+	}elseif ($new_g < 0)
+	{
+		$new_g = 0;
+	}
+
+	$new_b = $old_b + $rgb_trf['b'];
+	if ($new_b > 255)
+	{
+		$new_b = 255;
+	}elseif ($new_b < 0)
+	{
+		$new_b = 0;
+	}
+
+	return $arrayName = array('r' => $new_r, 'g' => $new_g, 'b' => $new_b);
+}
+
 public function create_selected_color_html($id)
 {
 
-	$query = db::$conn->query("SELECT * FROM nb_colors_work_tbl WHERE id = ".$id);
+	$query = db::$conn->query("SELECT * FROM nb_colors_work_tbl WHERE user = '".$_SESSION['user_id']."' AND id = ".$id);
 	$clr = mysqli_fetch_assoc($query);
 
-	$html = '	<div id="S'.$clr['id'].'" class="col-12 col-sm-6 col-xl-3 mb-2 nb-selected">
-					<div class="card">
+	$html = '	<div class="nbed_selected_single_colors nb-selected-color_S nb-color-shape nb-selected-color" id="'.$clr['id'].'" data-R="'.$clr['rgb_r'].'" data-G="'.$clr['rgb_g'].'" data-B="'.$clr['rgb_b'].'" data-h="'.$clr['hsl_h'].'" data-s="'.$clr['hsl_s'].'" data-l="'.$clr['hsl_l'].'" style="background-color: rgb('.$clr['rgb_r'].', '.$clr['rgb_g'].', '.$clr['rgb_b'].') ">
+	<div class="selected_colors_hover">
+	<div class="selected_colors_hover_cnt">
+	<div data-id="'.$clr['id'].'" class="selected_colors_hover_btn schb_remove"><img src="./img/delete-icon.svg"></div>
+	<div data-id="'.$clr['id'].'" class="selected_colors_hover_btn schb_edit"><img src="./img/pen_selec.svg"></div>
+	</div>
+	</div>
+	</div>
 
-						  <p class="card-header">
-						  	<i id="rep_'.$clr['new_hex'].'" class="nb-replace_color fas fa-cog pr-2 nb_color_push_settings"></i>
-						  	#'.$clr['new_hex'].'
-						  	<i id="rem_'.$clr['id'].'" class="nb-selected_rem fas fa-times pr-2 nb_color_push_settings" style="float: right"></i>
-						  </p>
-							<div class="card-body">
-						  <div id="clr_'.$clr['id'].'" data-h="'.$clr['hsl_h'].'" data-s="'.$clr['hsl_s'].'" data-l="'.$clr['hsl_l'].'" class="card-text nb-color-shape nb-selected-color" style="background-color: rgb('.$clr['rgb_r'].', '.$clr['rgb_g'].', '.$clr['rgb_b'].') "></div>
-						</div>
-					</div>
-				</div>';
+				';
 
 				return $html;
 }
@@ -191,7 +267,7 @@ public function replace_color_rgb($r, $g, $b, $old_color)
 		hsl_h = '".$hsl['h']."',
 		hsl_s = '".$hsl['s']."',
 		hsl_l = '".$hsl['l']."'
-	 WHERE new_hex = '".$old_color."'");
+	 WHERE user = '".$_SESSION['user_id']."' AND new_hex = '".$old_color."'");
 
 }
 
