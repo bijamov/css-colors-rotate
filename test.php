@@ -1,29 +1,32 @@
-<?php
-include_once('./classes/db_connection.php');
-include_once('./classes/class_editor.php');
-include_once('./classes/class_import_colors.php');
 
-$nb_import_colors = new nb_import_colors();
-$nb_editor = new nb_editor();
+<!DOCTYPE html>
+<html>
+<head>
+<!-- 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/css/bootstrap.min.css" integrity="sha384-VCmXjywReHh4PwowAiWNagnWcLhlEJLA5buUprzK8rxFgeH0kww/aWY76TfkUoSX" crossorigin="anonymous"> -->
+<title>test</title>
+</head>
+<body>
+<div class="">
+	<div class="row">
+		<div class="col-3">1st</div>
+		<div class="col-3">2st</div>
+		<div class="col-3">3st</div>
+		<div class="col-3">4st</div>
+		<?php
 
-//$ok = $nb_import_colors->hsl_to_grb(360, 50, 50);
+		echo $_SERVER['HTTP_HOST'].'<BR>';
+		echo $_SERVER['DOCUMENT_ROOT'];
 
-$clr = ['r'=> 0, 'g'=> 3, 'b'=> 2];
-
-
-
-$hsl = $nb_import_colors->rgb_to_hsl($clr['r'], $clr['g'], $clr['b']);
-$rgb = $nb_import_colors->hsl_to_grb($hsl['h'], $hsl['s'], $hsl['l']);
-//$hsl = $nb_import_colors->rgb_to_hsl($rgb);
-
-//$ok = $nb_editor->transformation_hue($trns, $hsl);
-
-var_dump($rgb);
+		?>
+		<div class="col-3">5st</div>
+		<div class="col-3">6st</div>
+		<div class="col-3">7st</div>
+		<div class="col-3">8st</div>
+	</div>
+</div>
 
 
 
 
-
-
-
-?>
+</body>
+</html>

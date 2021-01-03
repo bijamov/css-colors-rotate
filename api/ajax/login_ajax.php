@@ -20,6 +20,9 @@ switch ($_POST['m']) {
 	case '5':
 		logout();
 		break;
+	case '6':
+		send_comf_mail();
+		break;
 
 }
 
@@ -65,7 +68,7 @@ function login() //m = 2
 	}
 	else if($log_status == 'status')
 	{
-		echo('login but not confirm yet');
+		echo('status');
 	}
 	else if($log_status == 'failed')
 	{
@@ -102,7 +105,7 @@ function check_registration_fields() //m = 3
 		else
 		{
 			$error = 1;
-			$html .= '<div class="alert alert-danger" role="alert">Your password is invalid</div>';
+			$html .= '<div class="alert alert-danger" role="alert">your password must be at least 8 characters and include number and character</div>';
 		}
 
 	}
@@ -145,17 +148,41 @@ function registration() //m = 4
 	{
 		echo('<div class="alert alert-danger" role="alert">Something\'s going wrong please try later</div>');
 	}
-
 }
-
 
 function logout() //m = 5
 {
-	session_start();
-	if(session_unset())
+	if (session_status() == PHP_SESSION_NONE) {
+	    session_start();
+	}
+
+	$login = new nb_users();
+	
+	if($login->logout())
+	{
+		echo "ok";
+	}
+}
+
+function send_comf_mail() //m = 6
+{
+	if (session_status() == PHP_SESSION_NONE) {
+	    session_start();
+	}
+
+	$login = new nb_users();
+	$login->email = $_POST['email'];
+	
+	if($login->send_confirmation_mail_again())
 	{
 		echo "ok";
 	}
 
 }
+
+
+
+
+
+
 ?>

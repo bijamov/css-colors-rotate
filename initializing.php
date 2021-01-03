@@ -1,8 +1,18 @@
 <!DOCTYPE html>
+<?php
+include_once('classes/class_initializing.php');
+include_once('classes/class_import_colors.php');
+
+$init = new nb_initializing();
+
+
+?>
 
 <html>
 <head>
 	<link rel="stylesheet" type="text/css" href="./lib/bootstrap-4.4.1-dist/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="./lib/sweetalert2/src/sweetalert2.scss">
+
 <title>Ready to start</title>
 </head>
 
@@ -15,17 +25,39 @@
   //USER
   if (isset($_SESSION['user_type']) AND $_SESSION['user_type'] == 'user')
   {
-    print_r($_FILES['css_file']);
+
+    if (isset($_FILES['css_file']) AND $_FILES['css_file'] != '')
+    {
+
+      $up_file = file_get_contents($_FILES['css_file']['tmp_name']);
+      $myfile = fopen('uploads/'.$_FILES['css_file']['name'], "w") or die("Unable to open file!");
+      fwrite($myfile, $up_file);
+      fclose($myfile);
+      $_SESSION['file_path'] = $_SERVER['DOCUMENT_ROOT'].'/cssvce/uploads/'.$_FILES['css_file']['name'];
+
+      $color_sys = new nb_import_colors();
+      $color_sys->initialize();
+      header('Location: front/new_editor.php');
+    }
+    else
+    {
+      header('Location: index.php');
+    }
   }
   //UNCONFIRMED
-  elseif (isset($_SESSION['user_type']) AND $_SESSION['user_type'] == 'unconfirmed')
+  elseif (isset($_SESSION['user_type']) AND $_SESSION['user_type'] == 'status')
   {
-    //header('Location: index.php');
+    header('Location: activation.php');
   }
   //NOT LOGIN
   else
   {
-    //header('Location: index.php');
+    $up_file = file_get_contents($_FILES['css_file']['tmp_name']);
+    $myfile = fopen('uploads/'.$_FILES['css_file']['name'], "w") or die("Unable to open file!");
+    fwrite($myfile, $up_file);
+    fclose($myfile);
+    $_SESSION['file_path'] = $_SERVER['DOCUMENT_ROOT'].'/cssvce/uploads/'.$_FILES['css_file']['name'];
+    header('Location: login.php');
   }
   ?>
 
@@ -112,7 +144,9 @@
 <script src="./lib/jquery.3.5.1/jquery-3.5.1.min.js"></script>
 <script src="./lib/popper-1.16.0/popper.min.js"></script>
 <script src="./lib/bootstrap-4.4.1-dist/js/bootstrap.min.js"></script>
+<script src="./lib/sweetalert2/src/sweetalert2.min.js"></script>
 <script src="./front/js/login_page.js"></script>
+<script src="./front/js/index_page.js"></script>
 
 </html>
 

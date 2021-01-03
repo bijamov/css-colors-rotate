@@ -1,0 +1,438 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="1100px" height="1100px" viewBox="0 0 1100 1100" enable-background="new 0 0 1100 1100" xml:space="preserve">
+<g>
+	<style>
+	  tspan {
+	    font-family:"Monospace";
+	    font-size:"15.8085";
+	  }
+	</style>
+
+	<text transform="matrix(1 0 0 1 120.7153 14.395)">
+	<tspan x="0" y="0" fill="#83C341" >.pace-flash-purple .pace .pace-activity </tspan>
+	<tspan x="270.234" y="0" fill="#BFBFBF" >{</tspan>
+	<tspan x="0" y="18.97" fill="#71CEE6" >  border-top-color</tspan>
+	<tspan x="123.52" y="18.97" fill="#BFBFBF" >:</tspan>
+	<tspan x="129.108" y="18.97" fill="#71CEE6" > </tspan>
+	<tspan x="134.048" y="18.97" fill="#996CAE" id="hex-color-1" >#1515ff</tspan>
+	<tspan x="190.134" y="18.97" fill="#BFBFBF" >;</tspan>
+	<tspan x="0" y="37.94" fill="#71CEE6" >  border-left-color</tspan>
+	<tspan x="123.164" y="37.94" fill="#BFBFBF" >:</tspan>
+	<tspan x="128.753" y="37.94" fill="#71CEE6" > </tspan>
+	<tspan x="133.693" y="37.94" fill="#996CAE" id="hex-color-2" >#f5d48d</tspan>
+	<tspan x="193.592" y="37.94" fill="#BFBFBF" >;</tspan>
+	<tspan x="0" y="56.911" fill="#BFBFBF" >}</tspan>
+	<tspan x="0" y="94.851" fill="#83C341" >.pace-loading-bar-purple .pace .pace-progress</tspan>
+	<tspan x="322.098" y="94.851" fill="#71CEE6" > </tspan>
+	<tspan x="327.039" y="94.851" fill="#BFBFBF" >{</tspan>
+	<tspan x="0" y="113.821" fill="#71CEE6" >  background</tspan>
+	<tspan x="91.47" y="113.821" fill="#BFBFBF" >:</tspan>
+	<tspan x="97.059" y="113.821" fill="#71CEE6" > </tspan>
+	<tspan x="101.999" y="113.821" fill="#996CAE"  id="hex-color-3">#c12f15</tspan>
+	<tspan x="160.347" y="113.821" fill="#BFBFBF" >;</tspan>
+	<tspan x="0" y="132.792" fill="#71CEE6" >  color</tspan>
+	<tspan x="43.651" y="132.792" fill="#BFBFBF" >:</tspan>
+	<tspan x="49.239" y="132.792" fill="#71CEE6" > </tspan>
+	<tspan x="54.18" y="132.792" fill="#996CAE" id="hex-color-4">#123f12</tspan>
+	<tspan x="113.863" y="132.792" fill="#BFBFBF" >;</tspan>
+	<tspan x="0" y="151.762" fill="#71CEE6" >  box-shadow</tspan>
+	<tspan x="93.994" y="151.762" fill="#BFBFBF" >:</tspan>
+	<tspan x="99.583" y="151.762" fill="#71CEE6" > </tspan>
+	<tspan x="104.523" y="151.762" fill="#996CAE" >120</tspan>
+	<tspan x="130.413" y="151.762" fill="#EC008C" >px</tspan>
+	<tspan x="146.978" y="151.762" fill="#71CEE6" > </tspan>
+	<tspan x="151.917" y="151.762" fill="#996CAE" >0</tspan>
+	<tspan x="160.547" y="151.762" fill="#71CEE6" > </tspan>
+	<tspan x="165.487" y="151.762" fill="#996CAE"  id="hex-color-5">#65f566</tspan>
+	<tspan x="225.171" y="151.762" fill="#BFBFBF" >,</tspan>
+	<tspan x="229.957" y="151.762" fill="#71CEE6" > </tspan>
+	<tspan x="234.897" y="151.762" fill="#996CAE" >240</tspan>
+	<tspan x="260.786" y="151.762" fill="#EC008C" >px</tspan>
+	<tspan x="277.351" y="151.762" fill="#71CEE6" > </tspan>
+	<tspan x="282.292" y="151.762" fill="#996CAE" >0</tspan>
+	<tspan x="290.921" y="151.762" fill="#71CEE6" > </tspan>
+	<tspan x="295.861" y="151.762" fill="#996CAE"  id="hex-color-6">#00ff0f</tspan>
+	<tspan x="348.351" y="151.762" fill="#BFBFBF" >;</tspan>
+	<tspan x="0" y="170.732" fill="#BFBFBF" >}</tspan>
+	<tspan x="0" y="208.672" fill="#83C341" >.pace-loading-bar-purple .pace .pace-activity</tspan>
+	<tspan x="311.354" y="208.672" fill="#71CEE6" > </tspan>
+	<tspan x="316.293" y="208.672" fill="#BFBFBF" >{</tspan>
+	<tspan x="0" y="227.643" fill="#71CEE6" >  box-shadow</tspan>
+	<tspan x="93.994" y="227.643" fill="#BFBFBF" >:</tspan>
+	<tspan x="99.583" y="227.643" fill="#71CEE6" > inset </tspan>
+	<tspan x="142.554" y="227.643" fill="#996CAE" >0 0 0 2</tspan>
+	<tspan x="191.894" y="227.643" fill="#EC008C" >px</tspan>
+	<tspan x="208.459" y="227.643" fill="#71CEE6" > </tspan>
+	<tspan x="213.399" y="227.643" fill="#996CAE"  id="hex-color-7">#c2af42</tspan>
+	<tspan x="271.416" y="227.643" fill="#BFBFBF" >,</tspan>
+	<tspan x="276.201" y="227.643" fill="#71CEE6" > inset </tspan>
+	<tspan x="319.173" y="227.643" fill="#996CAE" >0 0 0 7</tspan>
+	<tspan x="368.513" y="227.643" fill="#EC008C" >px</tspan>
+	<tspan x="385.078" y="227.643" fill="#71CEE6" > </tspan>
+	<tspan x="390.018" y="227.643" fill="#996CAE"  id="hex-color-8">#c1c1c1</tspan>
+	<tspan x="449.292" y="227.643" fill="#BFBFBF" >;</tspan>
+	<tspan x="0" y="246.613" fill="#71CEE6" >}</tspan>
+	<tspan x="0" y="284.553" fill="#83C341" >.pace-mac-osx-purple .pace .pace-progress</tspan>
+	<tspan x="301.303" y="284.553" fill="#71CEE6" > </tspan>
+	<tspan x="306.243" y="284.553" fill="#BFBFBF" >{</tspan>
+	<tspan x="0" y="303.523" fill="#71CEE6" >  background-color</tspan>
+	<tspan x="130.983" y="303.523" fill="#BFBFBF" >:</tspan>
+	<tspan x="136.572" y="303.523" fill="#71CEE6" > </tspan>
+	<tspan x="141.512" y="303.523" fill="#996CAE"  id="hex-color-9">#546d51 </tspan>
+	<tspan x="209.841" y="303.523" fill="#BFBFBF" >;</tspan>
+	<tspan x="215.429" y="303.523" fill="#71CEE6" > </tspan>
+	<tspan x="0" y="322.494" fill="#71CEE6" >  box-shadow: inset </tspan>
+	<tspan x="142.554" y="322.494" fill="#996CAE" >-1</tspan>
+	<tspan x="156.927" y="322.494" fill="#EC008C" >px</tspan>
+	<tspan x="173.492" y="322.494" fill="#71CEE6" > </tspan>
+	<tspan x="178.432" y="322.494" fill="#996CAE" >0</tspan>
+	<tspan x="187.062" y="322.494" fill="#71CEE6" > </tspan>
+	<tspan x="192.002" y="322.494" fill="#996CAE"  id="hex-color-10">#245875</tspan>
+	<tspan x="255.283" y="322.494" fill="#BFBFBF" >,</tspan>
+	<tspan x="260.068" y="322.494" fill="#71CEE6" > inset</tspan>
+	<tspan x="298.1" y="322.494" fill="#996CAE" > 0 -1</tspan>
+	<tspan x="330.983" y="322.494" fill="#EC008C" >px</tspan>
+	<tspan x="347.548" y="322.494" fill="#71CEE6" > </tspan>
+	<tspan x="352.488" y="322.494" fill="#996CAE"  id="hex-color-11">#55f4fd</tspan>
+	<tspan x="408.682" y="322.494" fill="#BFBFBF" >,</tspan>
+	<tspan x="413.468" y="322.494" fill="#71CEE6" > inset</tspan>
+	<tspan x="451.5" y="322.494" fill="#996CAE" > 0 2</tspan>
+	<tspan x="478.64" y="322.494" fill="#EC008C" >px</tspan>
+	<tspan x="495.205" y="322.494" fill="#71CEE6" > rgba(</tspan>
+	<tspan x="537.667" y="322.494" fill="#996CAE" >100</tspan>
+	<tspan x="563.556" y="322.494" fill="#BFBFBF" >,</tspan>
+	<tspan x="568.342" y="322.494" fill="#996CAE" >122</tspan>
+	<tspan x="594.231" y="322.494" fill="#BFBFBF" >,</tspan>
+	<tspan x="599.017" y="322.494" fill="#996CAE" >164</tspan>
+	<tspan x="624.907" y="322.494" fill="#BFBFBF" >,</tspan>
+	<tspan x="629.692" y="322.494" fill="#996CAE" >50</tspan>
+	<tspan x="646.952" y="322.494" fill="#EC008C" >%</tspan>
+	<tspan x="662.39" y="322.494" fill="#71CEE6" >)</tspan>
+	<tspan x="668.442" y="322.494" fill="#BFBFBF" >,</tspan>
+	<tspan x="673.228" y="322.494" fill="#71CEE6" > inset </tspan>
+	<tspan x="716.199" y="322.494" fill="#996CAE" >0 6</tspan>
+	<tspan x="738.399" y="322.494" fill="#EC008C" >px</tspan>
+	<tspan x="754.964" y="322.494" fill="#71CEE6" > rgba(</tspan>
+	<tspan x="797.426" y="322.494" fill="#996CAE" >255</tspan>
+	<tspan x="823.315" y="322.494" fill="#BFBFBF" >,</tspan>
+	<tspan x="828.101" y="322.494" fill="#996CAE" >255</tspan>
+	<tspan x="853.991" y="322.494" fill="#BFBFBF" >,</tspan>
+	<tspan x="858.776" y="322.494" fill="#996CAE" >255</tspan>
+	<tspan x="884.666" y="322.494" fill="#BFBFBF" >,</tspan>
+	<tspan x="889.452" y="322.494" fill="#996CAE" >30</tspan>
+	<tspan x="906.711" y="322.494" fill="#EC008C" >%</tspan>
+	<tspan x="922.149" y="322.494" fill="#71CEE6" >)</tspan>
+	<tspan x="928.201" y="322.494" fill="#BFBFBF" >;</tspan>
+	<tspan x="0" y="341.464" fill="#BFBFBF" >}</tspan>
+	<tspan x="0" y="379.404" fill="#83C341" >.pace-mac-osx-purple .pace .pace-activity</tspan>
+	<tspan x="290.559" y="379.404" fill="#71CEE6" > </tspan>
+	<tspan x="295.499" y="379.404" fill="#BFBFBF" >{</tspan>
+	<tspan x="0" y="398.375" fill="#71CEE6" >  background-image</tspan>
+	<tspan x="139.459" y="398.375" fill="#BFBFBF" >:</tspan>
+	<tspan x="145.048" y="398.375" fill="#71CEE6" > radial-gradient(rgba(</tspan>
+	<tspan x="295.066" y="398.375" fill="#996CAE" >244</tspan>
+	<tspan x="320.956" y="398.375" fill="#BFBFBF" >,</tspan>
+	<tspan x="325.742" y="398.375" fill="#996CAE" >244</tspan>
+	<tspan x="351.631" y="398.375" fill="#BFBFBF" >,</tspan>
+	<tspan x="356.417" y="398.375" fill="#996CAE" >224</tspan>
+	<tspan x="382.306" y="398.375" fill="#BFBFBF" >,</tspan>
+	<tspan x="387.092" y="398.375" fill="#996CAE" >65</tspan>
+	<tspan x="404.352" y="398.375" fill="#EC008C" >%</tspan>
+	<tspan x="419.79" y="398.375" fill="#71CEE6" >) </tspan>
+	<tspan x="430.781" y="398.375" fill="#996CAE" >0</tspan>
+	<tspan x="439.411" y="398.375" fill="#EC008C" >%</tspan>
+	<tspan x="454.849" y="398.375" fill="#BFBFBF" >,</tspan>
+	<tspan x="459.635" y="398.375" fill="#71CEE6" > rgba(</tspan>
+	<tspan x="502.097" y="398.375" fill="#996CAE" >101</tspan>
+	<tspan x="527.987" y="398.375" fill="#BFBFBF" >,</tspan>
+	<tspan x="532.772" y="398.375" fill="#996CAE" >148</tspan>
+	<tspan x="558.662" y="398.375" fill="#BFBFBF" >,</tspan>
+	<tspan x="563.448" y="398.375" fill="#996CAE" >197</tspan>
+	<tspan x="589.337" y="398.375" fill="#BFBFBF" >,</tspan>
+	<tspan x="594.123" y="398.375" fill="#996CAE" >15</tspan>
+	<tspan x="611.383" y="398.375" fill="#EC008C" >%</tspan>
+	<tspan x="626.821" y="398.375" fill="#71CEE6" >) </tspan>
+	<tspan x="637.813" y="398.375" fill="#996CAE" >100</tspan>
+	<tspan x="663.702" y="398.375" fill="#EC008C" >%</tspan>
+	<tspan x="679.14" y="398.375" fill="#71CEE6" >)</tspan>
+	<tspan x="685.192" y="398.375" fill="#BFBFBF" >;</tspan>
+	<tspan x="0" y="417.345" fill="#71CEE6" >  height</tspan>
+	<tspan x="53.469" y="417.345" fill="#BFBFBF" >:</tspan>
+	<tspan x="59.058" y="417.345" fill="#71CEE6" > </tspan>
+	<tspan x="63.998" y="417.345" fill="#996CAE" >12</tspan>
+	<tspan x="81.258" y="417.345" fill="#EC008C" >px</tspan>
+	<tspan x="97.823" y="417.345" fill="#BFBFBF" >;</tspan>
+	<tspan x="0" y="436.315" fill="#BFBFBF" >}</tspan>
+	<tspan x="0" y="474.255" fill="#83C341" >.pace-progress-color-purple .pace-progress</tspan>
+	<tspan x="300.246" y="474.255" fill="#71CEE6" > </tspan>
+	<tspan x="305.186" y="474.255" fill="#BFBFBF" >{</tspan>
+	<tspan x="0" y="493.226" fill="#71CEE6" >  color</tspan>
+	<tspan x="43.651" y="493.226" fill="#BFBFBF" >: </tspan>
+	<tspan x="54.18" y="493.226" fill="#996CAE"  id="hex-color-12">#d52d1d</tspan>
+	<tspan x="117.784" y="493.226" fill="#BFBFBF" > ;</tspan>
+	<tspan x="0" y="512.196" fill="#BFBFBF" >}</tspan></text>
+	<text transform="matrix(1 0 0 1 120.7153 564.5703)">
+		<tspan x="0" y="0" fill="#83C341" >.pace-flash-purple .pace .pace-activity </tspan>
+	<tspan x="270.234" y="0" fill="#BFBFBF" >{</tspan>
+	<tspan x="0" y="18.97" fill="#71CEE6" >  border-top-color</tspan>
+	<tspan x="123.52" y="18.97" fill="#BFBFBF" >:</tspan>
+	<tspan x="129.108" y="18.97" fill="#71CEE6" > </tspan>
+	<tspan x="134.048" y="18.97" fill="#996CAE"  id="hex-color-13">#1515ff</tspan>
+	<tspan x="190.134" y="18.97" fill="#BFBFBF" >;</tspan>
+	<tspan x="0" y="37.94" fill="#71CEE6" >  border-left-color</tspan>
+	<tspan x="123.164" y="37.94" fill="#BFBFBF" >:</tspan>
+	<tspan x="128.753" y="37.94" fill="#71CEE6" > </tspan>
+	<tspan x="133.693" y="37.94" fill="#996CAE"  id="hex-color-14">#f5d48d</tspan>
+	<tspan x="193.592" y="37.94" fill="#BFBFBF" >;</tspan>
+	<tspan x="0" y="56.911" fill="#BFBFBF" >}</tspan>
+	<tspan x="0" y="94.851" fill="#83C341" >.pace-loading-bar-purple .pace .pace-progress</tspan>
+	<tspan x="322.098" y="94.851" fill="#71CEE6" > </tspan>
+	<tspan x="327.039" y="94.851" fill="#BFBFBF" >{</tspan>
+	<tspan x="0" y="113.821" fill="#71CEE6" >  background</tspan>
+	<tspan x="91.47" y="113.821" fill="#BFBFBF" >:</tspan>
+	<tspan x="97.059" y="113.821" fill="#71CEE6" > </tspan>
+	<tspan x="101.999" y="113.821" fill="#996CAE"  id="hex-color-15">#c12f15</tspan>
+	<tspan x="160.347" y="113.821" fill="#BFBFBF" >;</tspan>
+	<tspan x="0" y="132.792" fill="#71CEE6" >  color</tspan>
+	<tspan x="43.651" y="132.792" fill="#BFBFBF" >:</tspan>
+	<tspan x="49.239" y="132.792" fill="#71CEE6" > </tspan>
+	<tspan x="54.18" y="132.792" fill="#996CAE"  id="hex-color-16">#123f12</tspan>
+	<tspan x="113.863" y="132.792" fill="#BFBFBF" >;</tspan>
+	<tspan x="0" y="151.762" fill="#71CEE6" >  box-shadow</tspan>
+	<tspan x="93.994" y="151.762" fill="#BFBFBF" >:</tspan>
+	<tspan x="99.583" y="151.762" fill="#71CEE6" > </tspan>
+	<tspan x="104.523" y="151.762" fill="#996CAE" >120</tspan>
+	<tspan x="130.413" y="151.762" fill="#EC008C" >px</tspan>
+	<tspan x="146.978" y="151.762" fill="#71CEE6" > </tspan>
+	<tspan x="151.917" y="151.762" fill="#996CAE" >0</tspan>
+	<tspan x="160.547" y="151.762" fill="#71CEE6" > </tspan>
+	<tspan x="165.487" y="151.762" fill="#996CAE"  id="hex-color-17">#65f566</tspan>
+	<tspan x="225.171" y="151.762" fill="#BFBFBF" >,</tspan>
+	<tspan x="229.957" y="151.762" fill="#71CEE6" > </tspan>
+	<tspan x="234.897" y="151.762" fill="#996CAE" >240</tspan>
+	<tspan x="260.786" y="151.762" fill="#EC008C" >px</tspan>
+	<tspan x="277.351" y="151.762" fill="#71CEE6" > </tspan>
+	<tspan x="282.292" y="151.762" fill="#996CAE" >0</tspan>
+	<tspan x="290.921" y="151.762" fill="#71CEE6" > </tspan>
+	<tspan x="295.861" y="151.762" fill="#996CAE"  id="hex-color-18">#00ff0f</tspan>
+	<tspan x="348.351" y="151.762" fill="#BFBFBF" >;</tspan>
+	<tspan x="0" y="170.732" fill="#BFBFBF" >}</tspan>
+	<tspan x="0" y="208.672" fill="#83C341" >.pace-loading-bar-purple .pace .pace-activity</tspan>
+	<tspan x="311.354" y="208.672" fill="#71CEE6" > </tspan>
+	<tspan x="316.293" y="208.672" fill="#BFBFBF" >{</tspan>
+	<tspan x="0" y="227.643" fill="#71CEE6" >  box-shadow</tspan>
+	<tspan x="93.994" y="227.643" fill="#BFBFBF" >:</tspan>
+	<tspan x="99.583" y="227.643" fill="#71CEE6" > inset </tspan>
+	<tspan x="142.554" y="227.643" fill="#996CAE" >0 0 0 2</tspan>
+	<tspan x="191.894" y="227.643" fill="#EC008C" >px</tspan>
+	<tspan x="208.459" y="227.643" fill="#71CEE6" > </tspan>
+	<tspan x="213.399" y="227.643" fill="#996CAE"  id="hex-color-19">#c2af42</tspan>
+	<tspan x="271.416" y="227.643" fill="#BFBFBF" >,</tspan>
+	<tspan x="276.201" y="227.643" fill="#71CEE6" > inset </tspan>
+	<tspan x="319.173" y="227.643" fill="#996CAE" >0 0 0 7</tspan>
+	<tspan x="368.513" y="227.643" fill="#EC008C" >px</tspan>
+	<tspan x="385.078" y="227.643" fill="#71CEE6" > </tspan>
+	<tspan x="390.018" y="227.643" fill="#996CAE"  id="hex-color-20">#c1c1c1</tspan>
+	<tspan x="449.292" y="227.643" fill="#BFBFBF" >;</tspan>
+	<tspan x="0" y="246.613" fill="#71CEE6" >}</tspan>
+	<tspan x="0" y="284.553" fill="#83C341" >.pace-mac-osx-purple .pace .pace-progress</tspan>
+	<tspan x="301.303" y="284.553" fill="#71CEE6" > </tspan>
+	<tspan x="306.243" y="284.553" fill="#BFBFBF" >{</tspan>
+	<tspan x="0" y="303.523" fill="#71CEE6" >  background-color</tspan>
+	<tspan x="130.983" y="303.523" fill="#BFBFBF" >:</tspan>
+	<tspan x="136.572" y="303.523" fill="#71CEE6" > </tspan>
+	<tspan x="141.512" y="303.523" fill="#996CAE"  id="hex-color-21">#546d51 </tspan>
+	<tspan x="209.841" y="303.523" fill="#BFBFBF" >;</tspan>
+	<tspan x="215.429" y="303.523" fill="#71CEE6" > </tspan>
+	<tspan x="0" y="322.494" fill="#71CEE6" >  box-shadow: inset </tspan>
+	<tspan x="142.554" y="322.494" fill="#996CAE" >-1</tspan>
+	<tspan x="156.927" y="322.494" fill="#EC008C" >px</tspan>
+	<tspan x="173.492" y="322.494" fill="#71CEE6" > </tspan>
+	<tspan x="178.432" y="322.494" fill="#996CAE" >0</tspan>
+	<tspan x="187.062" y="322.494" fill="#71CEE6" > </tspan>
+	<tspan x="192.002" y="322.494" fill="#996CAE"  id="hex-color-22">#245875</tspan>
+	<tspan x="255.283" y="322.494" fill="#BFBFBF" >,</tspan>
+	<tspan x="260.068" y="322.494" fill="#71CEE6" > inset</tspan>
+	<tspan x="298.1" y="322.494" fill="#996CAE" > 0 -1</tspan>
+	<tspan x="330.983" y="322.494" fill="#EC008C" >px</tspan>
+	<tspan x="347.548" y="322.494" fill="#71CEE6" > </tspan>
+	<tspan x="352.488" y="322.494" fill="#996CAE"  id="hex-color-23">#55f4fd</tspan>
+	<tspan x="408.682" y="322.494" fill="#BFBFBF" >,</tspan>
+	<tspan x="413.468" y="322.494" fill="#71CEE6" > inset</tspan>
+	<tspan x="451.5" y="322.494" fill="#996CAE" > 0 2</tspan>
+	<tspan x="478.64" y="322.494" fill="#EC008C" >px</tspan>
+	<tspan x="495.205" y="322.494" fill="#71CEE6" > rgba(</tspan>
+	<tspan x="537.667" y="322.494" fill="#996CAE" >100</tspan>
+	<tspan x="563.556" y="322.494" fill="#BFBFBF" >,</tspan>
+	<tspan x="568.342" y="322.494" fill="#996CAE" >122</tspan>
+	<tspan x="594.231" y="322.494" fill="#BFBFBF" >,</tspan>
+	<tspan x="599.017" y="322.494" fill="#996CAE" >164</tspan>
+	<tspan x="624.907" y="322.494" fill="#BFBFBF" >,</tspan>
+	<tspan x="629.692" y="322.494" fill="#996CAE" >50</tspan>
+	<tspan x="646.952" y="322.494" fill="#EC008C" >%</tspan>
+	<tspan x="662.39" y="322.494" fill="#71CEE6" >)</tspan>
+	<tspan x="668.442" y="322.494" fill="#BFBFBF" >,</tspan>
+	<tspan x="673.228" y="322.494" fill="#71CEE6" > inset </tspan>
+	<tspan x="716.199" y="322.494" fill="#996CAE" >0 6</tspan>
+	<tspan x="738.399" y="322.494" fill="#EC008C" >px</tspan>
+	<tspan x="754.964" y="322.494" fill="#71CEE6" > rgba(</tspan>
+	<tspan x="797.426" y="322.494" fill="#996CAE" >255</tspan>
+	<tspan x="823.315" y="322.494" fill="#BFBFBF" >,</tspan>
+	<tspan x="828.101" y="322.494" fill="#996CAE" >255</tspan>
+	<tspan x="853.991" y="322.494" fill="#BFBFBF" >,</tspan>
+	<tspan x="858.776" y="322.494" fill="#996CAE" >255</tspan>
+	<tspan x="884.666" y="322.494" fill="#BFBFBF" >,</tspan>
+	<tspan x="889.452" y="322.494" fill="#996CAE" >30</tspan>
+	<tspan x="906.711" y="322.494" fill="#EC008C" >%</tspan>
+	<tspan x="922.149" y="322.494" fill="#71CEE6" >)</tspan>
+	<tspan x="928.201" y="322.494" fill="#BFBFBF" >;</tspan>
+	<tspan x="0" y="341.464" fill="#BFBFBF" >}</tspan>
+	<tspan x="0" y="379.404" fill="#83C341" >.pace-mac-osx-purple .pace .pace-activity</tspan>
+	<tspan x="290.559" y="379.404" fill="#71CEE6" > </tspan>
+	<tspan x="295.499" y="379.404" fill="#BFBFBF" >{</tspan>
+	<tspan x="0" y="398.375" fill="#71CEE6" >  background-image</tspan>
+	<tspan x="139.459" y="398.375" fill="#BFBFBF" >:</tspan>
+	<tspan x="145.048" y="398.375" fill="#71CEE6" > radial-gradient(rgba(</tspan>
+	<tspan x="295.066" y="398.375" fill="#996CAE" >244</tspan>
+	<tspan x="320.956" y="398.375" fill="#BFBFBF" >,</tspan>
+	<tspan x="325.742" y="398.375" fill="#996CAE" >244</tspan>
+	<tspan x="351.631" y="398.375" fill="#BFBFBF" >,</tspan>
+	<tspan x="356.417" y="398.375" fill="#996CAE" >224</tspan>
+	<tspan x="382.306" y="398.375" fill="#BFBFBF" >,</tspan>
+	<tspan x="387.092" y="398.375" fill="#996CAE" >65</tspan>
+	<tspan x="404.352" y="398.375" fill="#EC008C" >%</tspan>
+	<tspan x="419.79" y="398.375" fill="#71CEE6" >) </tspan>
+	<tspan x="430.781" y="398.375" fill="#996CAE" >0</tspan>
+	<tspan x="439.411" y="398.375" fill="#EC008C" >%</tspan>
+	<tspan x="454.849" y="398.375" fill="#BFBFBF" >,</tspan>
+	<tspan x="459.635" y="398.375" fill="#71CEE6" > rgba(</tspan>
+	<tspan x="502.097" y="398.375" fill="#996CAE" >101</tspan>
+	<tspan x="527.987" y="398.375" fill="#BFBFBF" >,</tspan>
+	<tspan x="532.772" y="398.375" fill="#996CAE" >148</tspan>
+	<tspan x="558.662" y="398.375" fill="#BFBFBF" >,</tspan>
+	<tspan x="563.448" y="398.375" fill="#996CAE" >197</tspan>
+	<tspan x="589.337" y="398.375" fill="#BFBFBF" >,</tspan>
+	<tspan x="594.123" y="398.375" fill="#996CAE" >15</tspan>
+	<tspan x="611.383" y="398.375" fill="#EC008C" >%</tspan>
+	<tspan x="626.821" y="398.375" fill="#71CEE6" >) </tspan>
+	<tspan x="637.813" y="398.375" fill="#996CAE" >100</tspan>
+	<tspan x="663.702" y="398.375" fill="#EC008C" >%</tspan>
+	<tspan x="679.14" y="398.375" fill="#71CEE6" >)</tspan>
+	<tspan x="685.192" y="398.375" fill="#BFBFBF" >;</tspan>
+	<tspan x="0" y="417.345" fill="#71CEE6" >  height</tspan>
+	<tspan x="53.469" y="417.345" fill="#BFBFBF" >:</tspan>
+	<tspan x="59.058" y="417.345" fill="#71CEE6" > </tspan>
+	<tspan x="63.998" y="417.345" fill="#996CAE" >12</tspan>
+	<tspan x="81.258" y="417.345" fill="#EC008C" >px</tspan>
+	<tspan x="97.823" y="417.345" fill="#BFBFBF" >;</tspan>
+	<tspan x="0" y="436.314" fill="#BFBFBF" >}</tspan>
+	<tspan x="0" y="474.256" fill="#83C341" >.pace-progress-color-purple .pace-progress</tspan>
+	<tspan x="300.246" y="474.256" fill="#71CEE6" > </tspan>
+	<tspan x="305.186" y="474.256" fill="#BFBFBF" >{</tspan>
+	<tspan x="0" y="493.226" fill="#71CEE6" >  color</tspan>
+	<tspan x="43.651" y="493.226" fill="#BFBFBF" >: </tspan>
+	<tspan x="54.18" y="493.226" fill="#996CAE"  id="hex-color-24">#d52d1d</tspan>
+	<tspan x="117.784" y="493.226" fill="#BFBFBF" > ;</tspan>
+	<tspan x="0" y="512.195" fill="#BFBFBF" >}</tspan></text>
+	<text transform="matrix(1 0 0 1 46.3052 14.4429)">
+		<tspan x="0" y="0" fill="#939598" font-family="'MyriadPro-Regular'" >21565</tspan>
+	<tspan x="0" y="18.97" fill="#939598" font-family="'MyriadPro-Regular'" >21566</tspan>
+	<tspan x="0" y="37.94" fill="#939598" font-family="'MyriadPro-Regular'" >21567</tspan>
+	<tspan x="0" y="56.911" fill="#939598" font-family="'MyriadPro-Regular'" >21568</tspan>
+	<tspan x="0" y="75.881" fill="#939598" font-family="'MyriadPro-Regular'" >21569</tspan>
+	<tspan x="0" y="94.851" fill="#939598" font-family="'MyriadPro-Regular'" >21570</tspan>
+	<tspan x="0" y="113.821" fill="#939598" font-family="'MyriadPro-Regular'" >21571</tspan>
+	<tspan x="0" y="132.792" fill="#939598" font-family="'MyriadPro-Regular'" >21572</tspan>
+	<tspan x="0" y="151.762" fill="#939598" font-family="'MyriadPro-Regular'" >21573</tspan>
+	<tspan x="0" y="170.732" fill="#939598" font-family="'MyriadPro-Regular'" >21574</tspan>
+	<tspan x="0" y="189.702" fill="#939598" font-family="'MyriadPro-Regular'" >21575</tspan>
+	<tspan x="0" y="208.672" fill="#939598" font-family="'MyriadPro-Regular'" >21576</tspan>
+	<tspan x="0" y="227.643" fill="#939598" font-family="'MyriadPro-Regular'" >21577</tspan>
+	<tspan x="0" y="246.613" fill="#939598" font-family="'MyriadPro-Regular'" >21578</tspan>
+	<tspan x="0" y="265.583" fill="#939598" font-family="'MyriadPro-Regular'" >21579</tspan>
+	<tspan x="0" y="284.553" fill="#939598" font-family="'MyriadPro-Regular'" >21580</tspan>
+	<tspan x="0" y="303.523" fill="#939598" font-family="'MyriadPro-Regular'" >21581</tspan>
+	<tspan x="0" y="322.494" fill="#939598" font-family="'MyriadPro-Regular'" >21582</tspan>
+	<tspan x="0" y="341.464" fill="#939598" font-family="'MyriadPro-Regular'" >21583</tspan>
+	<tspan x="0" y="360.434" fill="#939598" font-family="'MyriadPro-Regular'" >21584</tspan>
+	<tspan x="0" y="379.404" fill="#939598" font-family="'MyriadPro-Regular'" >21585</tspan>
+	<tspan x="0" y="398.375" fill="#939598" font-family="'MyriadPro-Regular'" >21586</tspan>
+	<tspan x="0" y="417.345" fill="#939598" font-family="'MyriadPro-Regular'" >21587</tspan>
+	<tspan x="0" y="436.315" fill="#939598" font-family="'MyriadPro-Regular'" >21588</tspan>
+	<tspan x="0" y="455.285" fill="#939598" font-family="'MyriadPro-Regular'" >21589</tspan>
+	<tspan x="0" y="474.255" fill="#939598" font-family="'MyriadPro-Regular'" >21590</tspan>
+	<tspan x="0" y="493.226" fill="#939598" font-family="'MyriadPro-Regular'" >21591</tspan>
+	<tspan x="0" y="512.196" fill="#939598" font-family="'MyriadPro-Regular'" >21592</tspan>
+	<tspan x="0" y="531.166" fill="#939598" font-family="'MyriadPro-Regular'" >21593</tspan>
+	<tspan x="0" y="550.136" fill="#939598" font-family="'MyriadPro-Regular'" >21594</tspan>
+	<tspan x="0" y="569.106" fill="#939598" font-family="'MyriadPro-Regular'" >21595</tspan>
+	<tspan x="0" y="588.077" fill="#939598" font-family="'MyriadPro-Regular'" >21596</tspan>
+	<tspan x="0" y="607.047" fill="#939598" font-family="'MyriadPro-Regular'" >21597</tspan>
+	<tspan x="0" y="626.017" fill="#939598" font-family="'MyriadPro-Regular'" >21598</tspan>
+	<tspan x="0" y="644.987" fill="#939598" font-family="'MyriadPro-Regular'" >21599</tspan>
+	<tspan x="0" y="663.958" fill="#939598" font-family="'MyriadPro-Regular'" >21600</tspan>
+	<tspan x="0" y="682.928" fill="#939598" font-family="'MyriadPro-Regular'" >21601</tspan>
+	<tspan x="0" y="701.898" fill="#939598" font-family="'MyriadPro-Regular'" >21602</tspan>
+	<tspan x="0" y="720.868" fill="#939598" font-family="'MyriadPro-Regular'" >21603</tspan>
+	<tspan x="0" y="739.838" fill="#939598" font-family="'MyriadPro-Regular'" >21604</tspan>
+	<tspan x="0" y="758.809" fill="#939598" font-family="'MyriadPro-Regular'" >21605</tspan>
+	<tspan x="0" y="777.779" fill="#939598" font-family="'MyriadPro-Regular'" >21606</tspan>
+	<tspan x="0" y="796.75" fill="#939598" font-family="'MyriadPro-Regular'" >21607</tspan>
+	<tspan x="0" y="815.719" fill="#939598" font-family="'MyriadPro-Regular'" >21608</tspan>
+	<tspan x="0" y="834.69" fill="#939598" font-family="'MyriadPro-Regular'" >21609</tspan>
+	<tspan x="0" y="853.66" fill="#939598" font-family="'MyriadPro-Regular'" >21610</tspan>
+	<tspan x="0" y="872.63" fill="#939598" font-family="'MyriadPro-Regular'" >21611</tspan>
+	<tspan x="0" y="891.6" fill="#939598" font-family="'MyriadPro-Regular'" >21612</tspan>
+	<tspan x="0" y="910.571" fill="#939598" font-family="'MyriadPro-Regular'" >21613</tspan>
+	<tspan x="0" y="929.541" fill="#939598" font-family="'MyriadPro-Regular'" >21614</tspan>
+	<tspan x="0" y="948.511" fill="#939598" font-family="'MyriadPro-Regular'" >21615</tspan>
+	<tspan x="0" y="967.481" fill="#939598" font-family="'MyriadPro-Regular'" >21616</tspan>
+	<tspan x="0" y="986.452" fill="#939598" font-family="'MyriadPro-Regular'" >21617</tspan>
+	<tspan x="0" y="1005.421" fill="#939598" font-family="'MyriadPro-Regular'" >21618</tspan>
+	<tspan x="0" y="1024.392" fill="#939598" font-family="'MyriadPro-Regular'" >21619</tspan>
+	<tspan x="0" y="1043.362" fill="#939598" font-family="'MyriadPro-Regular'" >21620</tspan>
+	<tspan x="0" y="1062.333" fill="#939598" font-family="'MyriadPro-Regular'" >21621</tspan>
+	<tspan x="0" y="1081.302" fill="#939598" font-family="'MyriadPro-Regular'" >21622</tspan></text>
+</g>
+<script type="text/javascript">
+
+
+	var color_1 = document.getElementById("hex-color-1");
+	color_1.setAttribute("fill", "red");
+	var color_2 = document.getElementById("hex-color-2");
+	color_2.setAttribute("fill", "red");
+	var color_3 = document.getElementById("hex-color-3");
+	color_3.setAttribute("fill", "red");
+	var color_4 = document.getElementById("hex-color-4");
+	color_4.setAttribute("fill", "red");
+	var color_5 = document.getElementById("hex-color-5");
+	color_5.setAttribute("fill", "red");
+	var color_6 = document.getElementById("hex-color-6");
+	color_6.setAttribute("fill", "red");
+	var color_7 = document.getElementById("hex-color-7");
+	color_7.setAttribute("fill", "red");
+	var color_8 = document.getElementById("hex-color-8");
+	color_8.setAttribute("fill", "red");
+	var color_9 = document.getElementById("hex-color-9");
+	color_9.setAttribute("fill", "red");
+	document.getElementById("hex-color-10").style.color = "red";
+	document.getElementById("hex-color-11").style.color = "red";
+	document.getElementById("hex-color-12").style.color = "red";
+	document.getElementById("hex-color-13").style.color = "red";
+	document.getElementById("hex-color-14").style.color = "red";
+	document.getElementById("hex-color-15").style.color = "red";
+	document.getElementById("hex-color-16").style.color = "red";
+	document.getElementById("hex-color-17").style.color = "red";
+	document.getElementById("hex-color-18").style.color = "red";
+	document.getElementById("hex-color-19").style.color = "red";
+	document.getElementById("hex-color-20").style.color = "red";
+	document.getElementById("hex-color-21").style.color = "red";
+	document.getElementById("hex-color-22").style.color = "red";
+	document.getElementById("hex-color-23").style.color = "red";
+	document.getElementById("hex-color-24").style.color = "red";
+
+</script>
+</svg>
